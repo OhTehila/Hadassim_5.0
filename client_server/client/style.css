@@ -1,0 +1,308 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and page setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    direction: rtl;  /* Hebrew layout */
+    padding: 20px; 
+}
+
+/* Main container */
+h1,
+h2,
+h3 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for forms */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* For all input fields and buttons */
+input,
+textarea,
+button {
+    width: 100%;  /* Make sure they take the full width available */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Specific input fields styling */
+input[type="text"],
+input[type="number"],
+textarea {
+    background-color: #f9f9f9;
+}
+
+/* Make textarea height larger */
+textarea {
+    height: 150px;
+}
+
+/* Style for buttons */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;  /* Added margin for separation */
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Style for the initial options screen */
+#initialOptions {
+    text-align: center;
+}
+
+#initialOptions button {
+    background-color: #2ecc71;
+    margin: 10px;
+    width: 200px;
+}
+
+#initialOptions button:hover {
+    background-color: #27ae60;
+}
+
+/* Style for login and register forms */
+#loginForm,
+#registerForm {
+    display: none;
+}
+
+/* Orders list */
+#ordersList {
+    margin-top: 20px;
+}
+
+#ordersList div {
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#ordersList button {
+    background-color: #e74c3c;
+    margin-top: 10px;
+}
+
+#ordersList button:hover {
+    background-color: #c0392b;
+}
+
+/* Specific styles for the orders section */
+.order {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Back button */
+.backButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    text-decoration: none;  /* Remove underline */
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Ensure no underline on backButton */
+.backButton, .backButton:visited {
+    text-decoration: none !important;
+}
+
+/* Specific styling for the product form */
+#productsContainer .product {
+    margin-bottom: 20px;  /* Add space between products */
+}
+
+#productsContainer input {
+    width: 100%; /* Make inputs take the full width */
+}
+
+/* Make the submit button appear under the "הוסף סחורה" button */
+#registerForm button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    margin-top: 20px;  /* Add margin to separate it from the previous button */
+}
+/* Hover effect for the submit button (הירשם) */
+#registerForm button[type="submit"]:hover {
+    background-color: #2980b9; 
+}
+
+.min-quantity-text {
+    margin-right: 8px;
+    font-size: 0.9em;
+    color: gray;
+}
+
+fieldset {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.productEntry {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px dashed #aaa;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.order {
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #fefefe;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.order table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    direction: rtl;
+}
+
+.order th, .order td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+button.selected {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+/* table of orders*/
+#productsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#productsTable th {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+#productsTable td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+#productsTable button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#productsTable button:hover {
+    background-color: #1976d2;
+}
+
+#productsTable input[type="number"] {
+    width: 70px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#totalAmountContainer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff3e0;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #e65100;
+}
+
+#placeOrderButton {
+    background-color: #43a047;
+    margin-top: 10px;
+}
+
+#placeOrderButton:hover {
+    background-color: #388e3c;
+}
+
+#ListOrders {
+    margin-top: 20px;
+}
+
+.button-container {
+    text-align: center; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    margin: 10px 0;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    max-width: 550px; 
+    width: 100%; 
+    box-sizing: border-box;
+    margin-right: auto; 
+    margin-left: 350px; 
+}
+  

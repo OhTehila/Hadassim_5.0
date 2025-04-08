@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניהול מכולת</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="welcomeTitle">ברוך הבא למערכת ניהול המכולת</h1>
+
+    <div id="initialOptions">
+        <button onclick="showLoginForm()">כניסת ספק קיים</button>
+        <button onclick="showRegisterForm()">רישום ספק חדש</button>
+        <button onclick="location.href='store_owner.html'">כניסת בעל מכולת</button>
+    </div>
+
+    <a href="index.html" class="backButton" style="display:none;">➡️</a>
+
+    <!-- טופס כניסת ספק קיים -->
+    <form id="loginForm" style="display: none;">
+        <h2>כניסת ספק</h2>
+        <input type="text" id="company_name_login" placeholder="שם החברה" required autocomplete="off"><br>
+        <input type="text" id="phone_number_login" placeholder="מספר טלפון" required autocomplete="off"><br>
+        <button id="submit">התחבר</button>
+    </form>
+
+    <!-- טופס רישום ספק חדש -->
+    <form id="registerForm" style="display: none;">
+        <h2>רישום ספק חדש</h2>
+        <input type="text" id="company_name" placeholder="שם החברה" required autocomplete="off"><br>
+        <input type="text" id="phone_number" placeholder="מספר טלפון" required autocomplete="off"><br>
+        <input type="text" id="representative_name" placeholder="שם נציג" required autocomplete="off"><br>
+
+        <h3>הוסף סחורה</h3>
+        <div id="productsContainer">
+            <div class="product">
+                <input type="text" id="product_name" placeholder="שם המוצר" required autocomplete="off"><br>
+                <input type="number" id="price_per_item" placeholder="מחיר" required autocomplete="off"><br>
+                <input type="number" id="min_quantity" placeholder="כמות מינימלית" required autocomplete="off"><br>
+            </div>
+        </div>
+        <button type="button" onclick="addProduct()">הוסף סחורה</button>
+
+        <button type="submit" onclick="registerSupplier()">הירשם</button>
+    </form>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

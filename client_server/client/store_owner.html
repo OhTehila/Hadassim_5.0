@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניהול מכולת</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="index.html" class="backButton" style="display:none;">➡️</a>
+    <!-- כניסת בעל המכולת -->
+    <form id="groceryLogin" style="display: block;">
+        <h2>כניסת בעל מכולת</h2>
+        <input type="text" id="adminUsername" placeholder="שם משתמש" required autocomplete="off"><br>
+        <input type="password" id="adminPassword" placeholder="סיסמה" required autocomplete="off"><br>
+        <button type="submit" id="submit">התחבר</button>
+    </form>
+    <!-- דשבורד בעל המכולת לאחר הכניסה -->
+    <div id="groceryDashboard" style="display: none;">
+        <!-- טופס הזמנה -->
+        <form id="orderForm">
+            <h3 id="orderTitle">הזמן סחורה מספק</h3>
+            <label for="supplier">בחר ספק:</label>
+            <select id="supplier" required>
+                <option value="" disabled selected hidden>בחר ספק</option>
+                <!-- ספקים יתווספו כאן -->
+            </select><br><br>
+
+            <!-- טבלת המוצרים -->
+            <table id="productsTable" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>שם מוצר</th>
+                        <th>מחיר ליחידה</th>
+                        <th>כמות מינימלית</th>
+                        <th>כמות רצויה</th>
+                        <th>הזמן מוצר / בטל מוצר</th>
+                    </tr>
+                </thead>
+                <tbody id="productsBody">
+                    <!-- המוצרים יטענו כאן -->
+                </tbody>
+            </table>
+
+            <!-- שדה סה"כ לתשלום -->
+            <div id="totalAmountContainer" style="display:none;">
+                <p>סה"כ לתשלום: <span id="totalAmount">0</span> ₪</p>
+                <button id="placeOrderButton" style="display:none;">בצע הזמנה</button>
+            </div>
+
+        </form>
+
+        <!-- הזמנות קיימות -->
+        <div class="button-container">
+            <button id="btnActive" onclick="active()">הצג הזמנות פעילות</button>
+            <button id="btnAll" onclick="showAllOrders()">מאגר הזמנות</button>
+        </div>
+        <div id="ListOrders"></div>
+    </div>
+
+    <script src="appStore.js"></script>
+</body>
+
+</html>
